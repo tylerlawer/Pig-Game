@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: cadetblue;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.pig_image{
+    width:100%;
+}
+
+.pig_image img{
+    width:300px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}

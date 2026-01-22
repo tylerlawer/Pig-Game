@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+function setup() {
+
+}
+
 function loadDice() {
     document.getElementById('dice_img').src = './src/dice-1.png';
+}
+
+
+function defer() {
+
+}
+
+
+function roll() {
+
 }

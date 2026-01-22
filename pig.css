@@ -1,13 +1,25 @@
+:root {
+    --primary-color: cadetblue;
+    --dice-size: 150px;
+    --pig-size: 300px;
+    --spacing: 10px;
+    --border-color: black;
+    --border-width: 3px;
+    --border-radius: 5px;
+}
+
 html, body {
     height: 100%;
     margin: 0;
 }
 
 body {
-    background: cadetblue;
+    background: var(--primary-color);
+    font-family: Arial, sans-serif;
 }
 
-.header {
+.header,
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,36 +31,49 @@ body {
     text-align: center;
 }
 
-.pig_image{
-    width:100%;
-}
-
 .pig_image img{
-    width:300px;
-    max-width:100%;
-    height:auto;
-    display:block;
-    margin:0 auto;
-}
-
-.content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.dice {
-    width: 100%;
+    width: var(--pig-size);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .dice img {
-    width:150px;
-    height:150px;
-    max-width:100%;
-    display:block;
-    margin:0 auto;
-    margin-top: 10px;
-    border: 3px solid black;
-    border-radius: 5px;
+    width: var(--dice-size);
+    height: var(--dice-size);
+    max-width: 100%;
+    display: block;
+    margin: 0 auto var(--spacing);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing);
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --dice-size: 120px;
+        --pig-size: 200px;
+    }
 }
